@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["ChannelError"],"fn":["bounded","unbounded"],"struct":["Channel","UnboundedChannel"]};

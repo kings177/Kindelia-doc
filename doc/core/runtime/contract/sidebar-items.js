@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["PRELUDE"],"enum":["RunContractError"],"fn":["contract_args_to_term","contract_code_to_term","run_contract","term_to_tree","tree_into_contract_return","tree_to_term"],"struct":["Recipient"],"type":["State"]};

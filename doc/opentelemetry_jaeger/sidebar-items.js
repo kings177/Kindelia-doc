@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["Error"],"fn":["new_pipeline"],"struct":["Exporter","PipelineBuilder","Process","Propagator"],"trait":["JaegerTraceRuntime"]};

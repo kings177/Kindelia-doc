@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["RpcError"],"fn":["new"],"struct":["Channel","Config","NewClient","RequestDispatch"]};

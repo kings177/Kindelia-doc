@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["channels_per_key","requests_per_channel"]};

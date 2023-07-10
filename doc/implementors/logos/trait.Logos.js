@@ -1,3 +1,0 @@
-(function() {var implementors = {
-"core":[["impl&lt;'s&gt; <a class=\"trait\" href=\"logos/trait.Logos.html\" title=\"trait logos::Logos\">Logos</a>&lt;'s&gt; for <a class=\"enum\" href=\"core/runtime/lexer/enum.MultiLineComment.html\" title=\"enum core::runtime::lexer::MultiLineComment\">MultiLineComment</a>"],["impl&lt;'s&gt; <a class=\"trait\" href=\"logos/trait.Logos.html\" title=\"trait logos::Logos\">Logos</a>&lt;'s&gt; for <a class=\"enum\" href=\"core/runtime/lexer/enum.Token.html\" title=\"enum core::runtime::lexer::Token\">Token</a>"]]
-};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

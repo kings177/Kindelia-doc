@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"struct":["H256","HashError"],"trait":["Hashable"]};

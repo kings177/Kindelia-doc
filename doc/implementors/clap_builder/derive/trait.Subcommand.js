@@ -1,5 +1,3 @@
 (function() {var implementors = {
-"clap":[],
-"clap_builder":[],
-"terminal_cli":[["impl <a class=\"trait\" href=\"clap_builder/derive/trait.Subcommand.html\" title=\"trait clap_builder::derive::Subcommand\">Subcommand</a> for <a class=\"enum\" href=\"terminal_cli/enum.Commands.html\" title=\"enum terminal_cli::Commands\">Commands</a>"]]
+"terminal_cli":[["impl Subcommand for <a class=\"enum\" href=\"terminal_cli/enum.Commands.html\" title=\"enum terminal_cli::Commands\">Commands</a>"]]
 };if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

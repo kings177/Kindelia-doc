@@ -1,4 +1,0 @@
-(function() {var implementors = {
-"core":[["impl&lt;S&gt; <a class=\"trait\" href=\"tarpc/server/trait.Serve.html\" title=\"trait tarpc::server::Serve\">Serve</a>&lt;<a class=\"enum\" href=\"core/rpc/enum.NodeRequest.html\" title=\"enum core::rpc::NodeRequest\">NodeRequest</a>&gt; for <a class=\"struct\" href=\"core/rpc/struct.ServeNode.html\" title=\"struct core::rpc::ServeNode\">ServeNode</a>&lt;S&gt;<span class=\"where fmt-newline\">where\n    S: <a class=\"trait\" href=\"core/rpc/trait.Node.html\" title=\"trait core::rpc::Node\">Node</a>,</span>"]],
-"tarpc":[]
-};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

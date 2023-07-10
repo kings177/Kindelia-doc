@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"attr":["derive_serde","server","service"],"enum":["ChannelError","ClientMessage"],"mod":["client","context","serde_transport","server","trace","transport"],"struct":["Request","Response","ServerError"],"trait":["Transport"]};

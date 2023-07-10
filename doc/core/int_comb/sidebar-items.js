@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"constant":["CON","DUP","ERA","ROOT"],"fn":["addr","enter","kind","link","new_inet","new_node","normal","port","reduce","rewrite","slot"],"struct":["INet"],"type":["Port"]};

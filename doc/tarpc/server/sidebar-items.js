@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"mod":["incoming","limits","tokio"],"struct":["BaseChannel","Config","InFlightRequest","Requests","ResponseGuard","TrackedRequest"],"trait":["Channel","Serve"]};

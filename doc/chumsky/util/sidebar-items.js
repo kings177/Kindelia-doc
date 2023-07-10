@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["Maybe"],"trait":["MaybeSync"],"type":["MaybeMut","MaybeRef"]};
