@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["AstTerm"],"fn":["contract_parser","parse_contract","parse_term","term_parser"],"struct":["ParsingError"],"type":["VarName"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["SamplingDecision","SpanKind","Status","TraceError"],"fn":["get_active_span","mark_span_as_active"],"mod":["noop"],"struct":["Event","Link","OrderMap","SamplingResult","SpanBuilder","SpanContext","SpanId","SpanRef","TraceFlags","TraceId","TraceState"],"trait":["FutureExt","Span","TraceContextExt","Tracer","TracerProvider"],"type":["TraceResult"]};

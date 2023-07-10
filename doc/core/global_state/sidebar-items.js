@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["GlobalStateError","SpecificPayload"],"struct":["Account","Contract","GlobalState","Payload","Transaction"]};

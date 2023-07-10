@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["addr_from_tx","pubk_from_seck","pubk_from_sign","recoverable_from_sign","sign"],"struct":["KeyPair"]};

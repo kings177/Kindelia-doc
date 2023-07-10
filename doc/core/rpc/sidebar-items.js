@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["NodeRequest","NodeResponse","NodeResponseFut","SendCoinsError"],"struct":["NodeClient","ServeNode"],"trait":["Node"]};

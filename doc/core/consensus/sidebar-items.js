@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["BLOCK_REWARD","DIFFICULTY","DIFFICULTY_PREFIX"],"enum":["ConsensusError"],"mod":["block","chain"]};

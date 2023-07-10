@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["formats"],"struct":["Framed"],"trait":["Deserializer","Serializer"],"type":["SymmetricallyFramed"]};

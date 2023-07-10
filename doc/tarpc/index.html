@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Disclaimer: This is not an official Google product."><title>tarpc - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../static.files/rustdoc-9bb858ba049f1f21.css" id="mainThemeStyle"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="tarpc" data-themes="" data-resource-suffix="" data-rustdoc-version="1.72.0-nightly (f20afcc45 2023-07-04)" data-channel="nightly" data-search-js="search-f6292fe389d70017.js" data-settings-js="settings-de11bff964e9d4e5.js" data-settings-css="settings-8c76f75bfb6bd192.css" data-theme-light-css="light-0f8c037637f9eb3e.css" data-theme-dark-css="dark-1097f8e92a01e3cf.css" data-theme-ayu-css="ayu-614652228113ac93.css" ><script src="../static.files/storage-59fd9b8ccb335783.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-0795b7d26be81095.js"></script><noscript><link rel="stylesheet" media="(prefers-color-scheme:light)" href="../static.files/light-0f8c037637f9eb3e.css"><link rel="stylesheet" media="(prefers-color-scheme:dark)" href="../static.files/dark-1097f8e92a01e3cf.css"><link rel="stylesheet" href="../static.files/noscript-13285aec31fa243e.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="logo-container" href="../tarpc/index.html"><img class="rust-logo" src="../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><h2></h2></nav><nav class="sidebar"><a class="logo-container" href="../tarpc/index.html"><img class="rust-logo" src="../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><h2 class="location"><a href="#">Crate tarpc</a></h2><div class="sidebar-elems"><ul class="block"><li class="version">Version 0.33.0</li><li><a id="all-types" href="all.html">All Items</a></li></ul><section><ul class="block"><li><a href="#reexports">Re-exports</a></li><li><a href="#modules">Modules</a></li><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li><li><a href="#attributes">Attribute Macros</a></li></ul></section></div></nav><main><div class="width-limiter"><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="main-heading"><h1>Crate <a class="mod" href="#">tarpc</a><button id="copy-path" title="Copy item path to clipboard"><img src="../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="srclink" href="../src/tarpc/lib.rs.html#6-446">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p><em>Disclaimer</em>: This is not an official Google product.</p>
+<p>tarpc is an RPC framework for rust with a focus on ease of use. Defining a
+service can be done in just a few lines of code, and most of the boilerplate of
+writing a server is taken care of for you.</p>
+<p><a href="https://docs.rs/crate/tarpc/">Documentation</a></p>
+<h3 id="what-is-an-rpc-framework"><a href="#what-is-an-rpc-framework">What is an RPC framework?</a></h3>
+<p>“RPC” stands for “Remote Procedure Call,” a function call where the work of
+producing the return value is being done somewhere else. When an rpc function is
+invoked, behind the scenes the function contacts some other process somewhere
+and asks them to evaluate the function instead. The original function then
+returns the value produced by the other process.</p>
+<p>RPC frameworks are a fundamental building block of most microservices-oriented
+architectures. Two well-known ones are <a href="http://www.grpc.io">gRPC</a> and
+<a href="https://capnproto.org/">Cap’n Proto</a>.</p>
+<p>tarpc differentiates itself from other RPC frameworks by defining the schema in code,
+rather than in a separate language such as .proto. This means there’s no separate compilation
+process, and no context switching between different languages.</p>
+<p>Some other features of tarpc:</p>
+<ul>
+<li>Pluggable transport: any type implementing <code>Stream&lt;Item = Request&gt; + Sink&lt;Response&gt;</code> can be
+used as a transport to connect the client and server.</li>
+<li><code>Send + 'static</code> optional: if the transport doesn’t require it, neither does tarpc!</li>
+<li>Cascading cancellation: dropping a request will send a cancellation message to the server.
+The server will cease any unfinished work on the request, subsequently cancelling any of its
+own requests, repeating for the entire chain of transitive dependencies.</li>
+<li>Configurable deadlines and deadline propagation: request deadlines default to 10s if
+unspecified. The server will automatically cease work when the deadline has passed. Any
+requests sent by the server that use the request context will propagate the request deadline.
+For example, if a server is handling a request with a 10s deadline, does 2s of work, then
+sends a request to another server, that server will see an 8s deadline.</li>
+<li>Distributed tracing: tarpc is instrumented with
+<a href="https://github.com/tokio-rs/tracing">tracing</a> primitives extended with
+<a href="https://opentelemetry.io/">OpenTelemetry</a> traces. Using a compatible tracing subscriber like
+<a href="https://github.com/open-telemetry/opentelemetry-rust/tree/main/opentelemetry-jaeger">Jaeger</a>,
+each RPC can be traced through the client, server, and other dependencies downstream of the
+server. Even for applications not connected to a distributed tracing collector, the
+instrumentation can also be ingested by regular loggers like
+<a href="https://github.com/env-logger-rs/env_logger/">env_logger</a>.</li>
+<li>Serde serialization: enabling the <code>serde1</code> Cargo feature will make service requests and
+responses <code>Serialize + Deserialize</code>. It’s entirely optional, though: in-memory transports can
+be used, as well, so the price of serialization doesn’t have to be paid when it’s not needed.</li>
+</ul>
+<h3 id="usage"><a href="#usage">Usage</a></h3>
+<p>Add to your <code>Cargo.toml</code> dependencies:</p>
+<div class="example-wrap"><pre class="language-toml"><code>tarpc = &quot;0.29&quot;
+</code></pre></div>
+<p>The <code>tarpc::service</code> attribute expands to a collection of items that form an rpc service.
+These generated types make it easy and ergonomic to write servers with less boilerplate.
+Simply implement the generated service trait, and you’re off to the races!</p>
+<h3 id="example"><a href="#example">Example</a></h3>
+<p>This example uses <a href="https://tokio.rs">tokio</a>, so add the following dependencies to
+your <code>Cargo.toml</code>:</p>
+<div class="example-wrap"><pre class="language-toml"><code>anyhow = &quot;1.0&quot;
+futures = &quot;0.3&quot;
+tarpc = { version = &quot;0.29&quot;, features = [&quot;tokio1&quot;] }
+tokio = { version = &quot;1.0&quot;, features = [&quot;macros&quot;] }
+</code></pre></div>
+<p>In the following example, we use an in-process channel for communication between
+client and server. In real code, you will likely communicate over the network.
+For a more real-world example, see <a href="example-service">example-service</a>.</p>
+<p>First, let’s set up the dependencies and service definition.</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code>
+<span class="kw">use </span>futures::{
+    future::{<span class="self">self</span>, Ready},
+    prelude::<span class="kw-2">*</span>,
+};
+<span class="kw">use </span>tarpc::{
+    client, context,
+    server::{<span class="self">self</span>, incoming::Incoming, Channel},
+};
+
+<span class="comment">// This is the service definition. It looks a lot like a trait definition.
+// It defines one RPC, hello, which takes one arg, name, and returns a String.
+</span><span class="attr">#[tarpc::service]
+</span><span class="kw">trait </span>World {
+    <span class="doccomment">/// Returns a greeting for name.
+    </span><span class="kw">async fn </span>hello(name: String) -&gt; String;
+}</code></pre></div>
+<p>This service definition generates a trait called <code>World</code>. Next we need to
+implement it for our Server struct.</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="comment">// This is the type that implements the generated World trait. It is the business logic
+// and is used to start the server.
+</span><span class="attr">#[derive(Clone)]
+</span><span class="kw">struct </span>HelloServer;
+
+<span class="kw">impl </span>World <span class="kw">for </span>HelloServer {
+    <span class="comment">// Each defined rpc generates two items in the trait, a fn that serves the RPC, and
+    // an associated type representing the future output by the fn.
+
+    </span><span class="kw">type </span>HelloFut = Ready&lt;String&gt;;
+
+    <span class="kw">fn </span>hello(<span class="self">self</span>, <span class="kw">_</span>: context::Context, name: String) -&gt; <span class="self">Self</span>::HelloFut {
+        future::ready(<span class="macro">format!</span>(<span class="string">&quot;Hello, {name}!&quot;</span>))
+    }
+}</code></pre></div>
+<p>Lastly let’s write our <code>main</code> that will start the server. While this example uses an
+<a href="transport/channel/index.html" title="mod tarpc::transport::channel">in-process channel</a>, tarpc also ships a generic <a href="serde_transport/index.html" title="mod tarpc::serde_transport"><code>serde_transport</code></a>
+behind the <code>serde-transport</code> feature, with additional <a href="serde_transport/tcp/index.html" title="mod tarpc::serde_transport::tcp">TCP</a> functionality
+available behind the <code>tcp</code> feature.</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="attr">#[tokio::main]
+</span><span class="kw">async fn </span>main() -&gt; anyhow::Result&lt;()&gt; {
+    <span class="kw">let </span>(client_transport, server_transport) = tarpc::transport::channel::unbounded();
+
+    <span class="kw">let </span>server = server::BaseChannel::with_defaults(server_transport);
+    tokio::spawn(server.execute(HelloServer.serve()));
+
+    <span class="comment">// WorldClient is generated by the #[tarpc::service] attribute. It has a constructor `new`
+    // that takes a config and any Transport as input.
+    </span><span class="kw">let </span><span class="kw-2">mut </span>client = WorldClient::new(client::Config::default(), client_transport).spawn();
+
+    <span class="comment">// The client has an RPC method for each RPC defined in the annotated trait. It takes the same
+    // args as defined, with the addition of a Context, which is always the first arg. The Context
+    // specifies a deadline and trace information which can be helpful in debugging requests.
+    </span><span class="kw">let </span>hello = client.hello(context::current(), <span class="string">&quot;Stim&quot;</span>.to_string()).<span class="kw">await</span><span class="question-mark">?</span>;
+
+    <span class="macro">println!</span>(<span class="string">&quot;{hello}&quot;</span>);
+
+    <span class="prelude-val">Ok</span>(())
+}</code></pre></div>
+<h3 id="service-documentation"><a href="#service-documentation">Service Documentation</a></h3>
+<p>Use <code>cargo doc</code> as you normally would to see the documentation created for all
+items expanded by a <code>service!</code> invocation.</p>
+</div></details><h2 id="reexports" class="small-section-header"><a href="#reexports">Re-exports</a></h2><ul class="item-table"><li><div class="item-name" id="reexport.tokio_serde"><code>pub use <a class="mod" href="../tokio_serde/index.html" title="mod tokio_serde">tokio_serde</a>;</code></div></li><li><div class="item-name" id="reexport.tokio_util"><code>pub use <a class="mod" href="../tokio_util/index.html" title="mod tokio_util">tokio_util</a>;</code></div></li></ul><h2 id="modules" class="small-section-header"><a href="#modules">Modules</a></h2><ul class="item-table"><li><div class="item-name"><a class="mod" href="client/index.html" title="mod tarpc::client">client</a></div><div class="desc docblock-short">Provides a client that connects to a server and sends multiplexed requests.</div></li><li><div class="item-name"><a class="mod" href="context/index.html" title="mod tarpc::context">context</a></div><div class="desc docblock-short">Provides a request context that carries a deadline and trace context. This context is sent from
+client to server and is used by the server to enforce response deadlines.</div></li><li><div class="item-name"><a class="mod" href="serde_transport/index.html" title="mod tarpc::serde_transport">serde_transport</a></div><div class="desc docblock-short">A generic Serde-based <code>Transport</code> that can serialize anything supported by <code>tokio-serde</code> via any medium that implements <code>AsyncRead</code> and <code>AsyncWrite</code>.</div></li><li><div class="item-name"><a class="mod" href="server/index.html" title="mod tarpc::server">server</a></div><div class="desc docblock-short">Provides a server that concurrently handles many connections sending multiplexed requests.</div></li><li><div class="item-name"><a class="mod" href="trace/index.html" title="mod tarpc::trace">trace</a></div><div class="desc docblock-short">Provides building blocks for tracing distributed programs.</div></li><li><div class="item-name"><a class="mod" href="transport/index.html" title="mod tarpc::transport">transport</a></div><div class="desc docblock-short">Provides a <a href="trait.Transport.html" title="trait tarpc::Transport"><code>Transport</code></a> trait as well as implementations.</div></li></ul><h2 id="structs" class="small-section-header"><a href="#structs">Structs</a></h2><ul class="item-table"><li><div class="item-name"><a class="struct" href="struct.Request.html" title="struct tarpc::Request">Request</a></div><div class="desc docblock-short">A request from a client to a server.</div></li><li><div class="item-name"><a class="struct" href="struct.Response.html" title="struct tarpc::Response">Response</a></div><div class="desc docblock-short">A response from a server to a client.</div></li><li><div class="item-name"><a class="struct" href="struct.ServerError.html" title="struct tarpc::ServerError">ServerError</a></div><div class="desc docblock-short">An error indicating the server aborted the request early, e.g., due to request throttling.</div></li></ul><h2 id="enums" class="small-section-header"><a href="#enums">Enums</a></h2><ul class="item-table"><li><div class="item-name"><a class="enum" href="enum.ChannelError.html" title="enum tarpc::ChannelError">ChannelError</a></div><div class="desc docblock-short">Critical errors that result in a Channel disconnecting.</div></li><li><div class="item-name"><a class="enum" href="enum.ClientMessage.html" title="enum tarpc::ClientMessage">ClientMessage</a></div><div class="desc docblock-short">A message from a client to a server.</div></li></ul><h2 id="traits" class="small-section-header"><a href="#traits">Traits</a></h2><ul class="item-table"><li><div class="item-name"><a class="trait" href="trait.Transport.html" title="trait tarpc::Transport">Transport</a></div><div class="desc docblock-short">A bidirectional stream (<a href="../futures_sink/trait.Sink.html" title="trait futures_sink::Sink"><code>Sink</code></a> + <a href="../futures_core/stream/trait.Stream.html" title="trait futures_core::stream::Stream"><code>Stream</code></a>) of messages.</div></li></ul><h2 id="attributes" class="small-section-header"><a href="#attributes">Attribute Macros</a></h2><ul class="item-table"><li><div class="item-name"><a class="attr" href="attr.derive_serde.html" title="attr tarpc::derive_serde">derive_serde</a></div><div class="desc docblock-short">A helper attribute to avoid a direct dependency on Serde.</div></li><li><div class="item-name"><a class="attr" href="attr.server.html" title="attr tarpc::server">server</a></div><div class="desc docblock-short">A utility macro that can be used for RPC server implementations.</div></li><li><div class="item-name"><a class="attr" href="attr.service.html" title="attr tarpc::service">service</a></div><div class="desc docblock-short">The main macro that creates RPC services.</div></li></ul></section></div></main></body></html>
